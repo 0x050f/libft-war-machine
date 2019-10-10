@@ -6,7 +6,7 @@
 /*   By: jtoty <jtoty@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/28 15:15:51 by jtoty             #+#    #+#             */
-/*   Updated: 2019/10/09 11:50:05 by lmartin          ###   ########.fr       */
+/*   Updated: 2019/10/10 09:45:47 by lmartin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,12 @@ void	ft_print_result(t_list *elem)
 	write(1, elem->content, len);
 }
 
-void	ft_del(void *content)
+void	ft_del(void *lst)
 {
-	free(content);
+	t_list	*curr;
+
+	curr = (t_list *)lst;
+	free(curr->content);
 }
 
 t_list	*ft_lstnewone(void const *content)
@@ -78,7 +81,7 @@ int main(int argc, const char *argv[])
 	elem3->next = elem4;
 	if (atoi(argv[1]) == 1)
 	{
-		ft_lstdelone(&elem3, &ft_del);
+		ft_lstdelone(elem3, &ft_del);
 		if (elem)
 			ft_print_result(elem);
 		else
