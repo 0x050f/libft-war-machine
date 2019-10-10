@@ -1,0 +1,91 @@
+\" *************************************************************************** #
+\"                                                                             #
+\"                                                        :::      ::::::::    #
+\"   help.1                                             :+:      :+:    :+:    #
+\"                                                    +:+ +:+         +:+      #
+\"   By: jtoty <jtoty@student.42.fr>                +#+  +:+       +#+         #
+\"                                                +#+#+#+#+#+   +#+            #
+\"   Created: 2017/02/25 15:42:01 by jtoty             #+#    #+#              #
+\"   Updated: 2017/02/25 15:42:01 by jtoty            ###   ########.fr        #
+\"                                                                             #
+\" *************************************************************************** #
+
+.TH Libftest "" "25 February 2017"
+.SH NAME
+.BR Libftest " -- libft project tester"
+.SH SYNOPSYS
+.RB bash " grademe.sh"
+.RI [ "options ..." ]
+.SH DESCRIPTION
+Libftest is a shell script that allows you to test your libft project.
+.SH OPTIONS
+Add successively all options you want, in the order you want.
+.TP
+.I "For example :"
+.br
+bash
+.B grademe.sh ft_atoi -n ft_strlen
+.br
+bash
+.B grademe.sh -b -p2
+.TP
+.I "The following options are available :"
+.TP
+.BR -h ", " --help
+Display help and exit
+.TP
+.B -d
+Allows to perfom the tests even if the files are in directories
+.TP
+.B -c
+Disable color
+.TP
+.B -s
+Disable searching Makefile, author and header file
+.TP
+.B -m
+When compiling library, test all the Makefile's rules
+.TP
+.B -l
+Disable compiling library
+.TP
+.B -f
+Disable checking forbidden functions
+.TP
+.B -n
+Disable norminette
+.TP
+.B -u
+Disable checking updates at launch
+.TP
+.B -p1
+Disable part 1 tests
+.TP
+.B -p2
+Disable part 2 tests
+.TP
+.B -b
+Disable bonus part tests
+.TP
+.B -a
+Disable additional part tests
+.TP
+.B -op1
+Do only part 1 tests
+.TP
+.B -op2
+Do only part 2 tests
+.TP
+.B -ob
+Do only bonus part tests
+.TP
+.B -oa
+Do only additional part tests
+.TP
+.B ft_function-name
+Test only this function
+.SH NOTE
+If you want to do fast tests, you sould use '-n', '-f' and '-q' options
+.SH BUG
+For any bugs reporting, contact jtoty@student.42.fr
+

@@ -1,0 +1,270 @@
+~~~~~~~~~~~~~~~~~~~~~~~~~~2019/01/17~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+#Fixed
+- Error in ft_striteri
+- Error in ft_strmapi
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~2018/06/29~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+#Added
+- One additional function : ft_strtok
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~2017/11/16~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+#Added
+- One test for ft_strlcat
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~2017/11/13~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+#Fixed
+- Error in ft_strlcpy
+- Error in ft_lstdelone
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~2017/09/25~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+#Added
+- One additional function : ft_strcasestr
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~2017/04/14~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+#Added
+- One additional function : ft_strncasecmp
+- One test for ft_strrchr
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~2017/04/02~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+#Added
+- Legend at the end of the script
+
+#Fixed
+- Tests for fd functions
+
+#Changed
+- Option -q becomes -m and allows to test all the Makefile's
+rules instead of doing only make re
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~2017/02/28~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+#Added
+- Abort detection
+- Bus error detection
+- Timeout detection
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~2017/02/25~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+#Changed
+- Display format of -h/--help option
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~2017/02/07~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+#Changed
+- Test 1 of ft_strnequ
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~2017/01/23~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+#Added
+- Option -d : allows to perform the tests even if the files
+are in directories
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~2016/12/22~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+#Added
+- One test for ft_strsub
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~2016/12/20~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+#Added
+- One test for ft_itoa
+- One test for ft_itoa_base
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~2016/12/19~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+#Added
+- One additional function : ft_itoa_base
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~2016/12/16~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+#Added
+- One test for ft_strchr
+- One test for ft_strrchr
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~2016/12/07~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+#Added
+- Option -op1 : do only part 1 tests
+- Option -op2 : do only part 2 tests
+- Option -ob : do only bonus part tests
+- Option -oa : do only additional part tests
+- Tests for ft_lstadd
+- Tests for ft_lstdelone
+- Tests for ft_lstdel
+
+#Changed
+- Tests of ft_strchr
+- Tests of ft_strrchr
+- Tests of ft_strmap
+- Tests of ft_strmapi
+- Tests of ft_striter
+- Tests of ft_striteri
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~2016/12/04~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+#Added
+- One test for ft_memmove
+
+#Changed
+- Test 1 of ft_strcat
+- Test 3 of ft_strcat
+- Test 1 of ft_strncat
+- Test 2 of ft_strncat
+- Test 5 of ft_strncat
+- Test 1 of ft_strlcat
+- Test 3 of ft_strlcat
+- Test 4 of ft_strlcat
+- Test 5 of ft_strlcat
+- Test 6 of ft_strlcat
+- Test 8 of ft_strlcat
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~2016/12/03~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+#Added
+- One test for ft_strncpy
+
+#Changed
+- Image for README.md
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~2016/11/30~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+#Changed
+- New character when display tests
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~2016/11/30~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+#Added
+- One test for ft_strlcat
+- One test for ft_bzero
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~2016/11/29~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+#Fixed
+- Display error in deepthought file
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~2016/11/21~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+#Changed
+- Forbidden functions detection. nm command is used now for
+better detection. Option -f to disable it
+- List of forbidden functions in part 1
+- Improve rapidity when checking norme
+
+#Fixed
+- Bug when checking forbidden functions
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~2016/11/21~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+#Fixed
+- Bug when checking forbidden functions
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~2016/11/20~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+#Added
+- One additional function : ft_strcasecmp
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~2016/11/19~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+#Changed
+- Test 2 of ft_strnequ (previous test was wrong)
+- Test 3 of ft_strnequ (previous test was wrong)
+- Test 5 of ft_strnequ (previous test was wrong)
+- Test 6 of ft_strnequ (previous test was wrong)
+
+#Added
+- Option -h / --help : display help and exit
+- One additional function : ft_strndup
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~2016/11/08~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+#Remove
+- Tests for ft_lstadd, ft_lstdel & ft_lstdelone due to errors
+
+#Added
+- One test for ft_strlcat
+- Display name of each part in deepthought file
+
+#Changed
+- Test 13 of ft_atoi
+- Test 2 of ft_atoi
+- Test 18 of ft_atoi
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~2016/11/08~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+#Added
+- Tests for ft_lstadd
+- One test for ft_strnstr
+- One test for ft_strlcat
+- Tests for ft_lstdel
+- Tests for ft_lstdelone
+- One test for ft_strlcpy
+- ft_*.o are now removed at the end of the tests
+- One test for ft_strnew
+
+#Changed
+- Test 5 of ft_strlcat
+- Test 1 of ft_strnew
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~2016/11/08~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+#Fixed
+- Tests for ft_strnequ
+
+#Added
+- Tests for ft_lstnew
+- Tests for ft_lstiter
+- Tests for ft_lstmap
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~2016/11/07~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+#Added
+- Additional test for ft_strlcat
+- Additional test for ft_strcmp
+- Additional test for ft_strtrim
+- Additional test for ft_strncmp
+- Additional test for ft_strsplit
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~2016/11/05~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+#Added
+- Additional test for ft_memmove
+
+#Changed
+- One test of ft_memcmp
+_ One test of ft_strnew
+
+#Fixed
+- Checking content of author file
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~2016/11/04~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+#Added
+- Additional test for ft_isascii
+- Checking if libft.h exists
+- Checking for norme erros in libft.h
+- Tests for ft_split, ft_memchr.
+
+#Changed
+- Separate mandatory functions in two parts : Part1 and Part2
+- Image for README.md
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~2016/11/03~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+#Added
+- Checking if Makefile file exists
+- Checking Makefile's rules
+- Checking compilation's flags in Makefile
+- Checking if author file exists
+- Checking content of author file
+- Tests for all functions of the mandatory part
+- Checking for forbidden functions
+- Checking for norme errors
+- Checking for updates at launch
+- Script options (see README.md for more details)
