@@ -1,5 +1,5 @@
 # WARNING
-This is an edit of prev libftest made by @jtoty to fit with the 2019 project libftest. <br/>
+This is an edit of prev libftest made by @jtoty to fit with the 2019 project libft. <br/>
 (ORIGINAL REP : https://github.com/jtoty/Libftest) <br/>
 This update was made by @lmartin <br/>
 Some things may not work (especially bonus part with lst functions), and things aren't tested. <br/>
