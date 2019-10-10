@@ -93,5 +93,5 @@ int		main(int argc, const char *argv[])
 			ft_print_result(str);
 		}
 	}
-       	return (0);
+	return (0);
 }
