@@ -6,7 +6,7 @@
 /*   By: jtoty <jtoty@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/28 15:15:51 by jtoty             #+#    #+#             */
-/*   Updated: 2019/10/10 09:45:47 by lmartin          ###   ########.fr       */
+/*   Updated: 2019/10/10 13:47:36 by lmartin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,12 +26,9 @@ void	ft_print_result(t_list *elem)
 	write(1, elem->content, len);
 }
 
-void	ft_del(void *lst)
+void	ft_del(void *content)
 {
-	t_list	*curr;
-
-	curr = (t_list *)lst;
-	free(curr->content);
+	free(content);
 }
 
 t_list	*ft_lstnewone(void const *content)
