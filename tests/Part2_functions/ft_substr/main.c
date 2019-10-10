@@ -6,7 +6,7 @@
 /*   By: jtoty <jtoty@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/28 12:35:18 by jtoty             #+#    #+#             */
-/*   Updated: 2019/10/09 08:23:23 by lmartin          ###   ########.fr       */
+/*   Updated: 2019/10/10 14:07:35 by lmartin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 void	ft_print_result(char const *s)
 {
 	int		len;
-	
+
 	len = 0;
 	while (s[len])
 		len++;
@@ -63,6 +63,15 @@ int		main(int argc, const char *argv[])
 	else if (arg == 4)
 	{
 		if (!(strsub = ft_substr(str, 0, 0)))
+			ft_print_result("NULL");
+		else
+			ft_print_result(strsub);
+		if (str == strsub)
+			ft_print_result("\nA new string was not returned");
+	}
+	else if (arg == 5)
+	{
+		if (!(strsub = ft_substr(str, 30, 20)))
 			ft_print_result("NULL");
 		else
 			ft_print_result(strsub);
