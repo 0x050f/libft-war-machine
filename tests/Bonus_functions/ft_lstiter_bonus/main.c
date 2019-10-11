@@ -6,7 +6,7 @@
 /*   By: jtoty <jtoty@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/28 15:16:05 by jtoty             #+#    #+#             */
-/*   Updated: 2019/10/09 13:52:15 by lmartin          ###   ########.fr       */
+/*   Updated: 2019/10/11 15:53:47 by lmartin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,11 +20,9 @@ void	ft_modify_list_with_d(void *elem)
 {
 	int		len;
 	char		*content;
-	t_list		*el;
 
 	len = 0;
-	el = (t_list *)elem;
-	content = (char *)el->content;
+	content = (char *)elem;
 	while (content[len])
 	{
 		content[len++] = 'd';

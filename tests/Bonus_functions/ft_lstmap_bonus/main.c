@@ -6,7 +6,7 @@
 /*   By: jtoty <jtoty@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/28 15:16:21 by jtoty             #+#    #+#             */
-/*   Updated: 2019/10/09 14:00:55 by lmartin          ###   ########.fr       */
+/*   Updated: 2019/10/11 16:02:56 by lmartin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	ft_print_result(t_list *elem)
 	len = 0;
 	while (((char *)elem->content)[len])
 		len++;
-	write(1, elem->content, len);
+	write(1, (char *)elem->content, len);
 	write(1, "\n", 1);
 }
 
@@ -47,23 +47,17 @@ t_list	*ft_lstnewone(void const *content)
 	return (elem);
 }
 
-t_list	*ft_map(void *elem)
+void	*ft_map(void *ct)
 {
 	int		i;
-	t_list	*new_elem;
-	t_list	*el;
 
-	el = (t_list *)elem;
-	new_elem = ft_lstnewone(el->content);
-	if (!new_elem)
-		return (0);
 	i = 0;
-	while (((char *)new_elem->content)[i])
+	while (((char *)ct)[i])
 	{
-		((char *)new_elem->content)[i] = 'y';
+		((char *)ct)[i] = 'y';
 		i++;
 	}
-	return (new_elem);
+	return (ct);
 }
 
 int main(int argc, const char *argv[])
