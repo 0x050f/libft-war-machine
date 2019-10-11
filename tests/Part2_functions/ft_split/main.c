@@ -6,7 +6,7 @@
 /*   By: jtoty <jtoty@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/28 12:34:58 by jtoty             #+#    #+#             */
-/*   Updated: 2019/10/09 07:50:02 by lmartin          ###   ########.fr       */
+/*   Updated: 2019/10/11 15:23:30 by lmartin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -103,6 +103,14 @@ int		main(int argc, const char *argv[])
 				i++;
 			}
 		}
+	}
+	else if (arg == 6)
+	{
+		if (!(tabstr = ft_split("", 'z')))
+			ft_print_result("NULL");
+		else
+			if (!tabstr[0])
+				ft_print_result("ok\n");
 	}
 	return (0);
 }
