@@ -6,7 +6,7 @@
 /*   By: jtoty <jtoty@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/28 15:16:21 by jtoty             #+#    #+#             */
-/*   Updated: 2019/10/11 16:02:56 by lmartin          ###   ########.fr       */
+/*   Updated: 2019/10/11 17:36:33 by lmartin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 #include "../../../libft.h"
 #include <unistd.h>
 #include <string.h>
+#include <stdio.h>
 
 void	ft_print_result(t_list *elem)
 {
@@ -22,7 +23,7 @@ void	ft_print_result(t_list *elem)
 	len = 0;
 	while (((char *)elem->content)[len])
 		len++;
-	write(1, (char *)elem->content, len);
+	write(1, ((char *)elem->content), len);
 	write(1, "\n", 1);
 }
 
@@ -49,15 +50,19 @@ t_list	*ft_lstnewone(void const *content)
 
 void	*ft_map(void *ct)
 {
-	int		i;
+	int i;
+	void	*c;
+	char	*pouet;
 
-	i = 0;
-	while (((char *)ct)[i])
-	{
-		((char *)ct)[i] = 'y';
-		i++;
-	}
-	return (ct);
+	if (!(c = malloc(sizeof(*(c)) * sizeof(c))))
+		return (NULL);
+	c = memcpy(c, ct, sizeof(c));
+	i = -1;
+	pouet = (char *)c;
+	while (pouet[++i])
+		if (pouet[i] == 'o')
+			pouet[i] = 'a';
+	return (c);
 }
 
 int main(int argc, const char *argv[])
@@ -88,10 +93,14 @@ int main(int argc, const char *argv[])
 			return (0);
 		if (list == elem)
 			write(1, "A new list is not returned\n", 27);
-		while (list)
+		int i;
+		i = 0;
+		ft_print_result(list);
+		while (list->next)
 		{
-			ft_print_result(list);
 			list = list->next;
+			ft_print_result(list);
+			i++;
 		}
 	}
 	return (0);
