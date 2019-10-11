@@ -6,7 +6,7 @@
 /*   By: jtoty <jtoty@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/28 12:35:18 by jtoty             #+#    #+#             */
-/*   Updated: 2019/10/11 18:21:28 by lmartin          ###   ########.fr       */
+/*   Updated: 2019/10/11 18:29:16 by lmartin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,13 +71,18 @@ int		main(int argc, const char *argv[])
 	}
 	else if (arg == 5)
 	{
-		if (!(strsub = ft_substr(str, 30, 20)))
+		char *bullshit;
+		if (!(strsub = ft_substr(str, 400, 20)))
 			ft_print_result("NULL");
 		else
+		{
+			bullshit = (char *)&strsub[30];
+			bullshit = "FULL BULLSHIT";
 			if (strsub)
 				ft_print_result(strsub);
 			else
 				ft_print_result("rip");
+		}
 		if (str == strsub)
 			ft_print_result("\nA new string was not returned");
 	}
