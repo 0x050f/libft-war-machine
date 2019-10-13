@@ -6,7 +6,7 @@
 #    By: jtoty <jtoty@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/01/23 18:26:36 by jtoty             #+#    #+#              #
-#    Updated: 2017/04/03 10:35:38 by jtoty            ###   ########.fr        #
+#    Updated: 2019/10/13 19:22:41 by lmartin          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -188,7 +188,7 @@ func_compil_lib()
 		printf "\n$> ls -la libft.a\n" >> ${PATH_DEEPTHOUGHT}/deepthought
 		ls -la ${PATH_LIBFT}/libft.a >> ${PATH_DEEPTHOUGHT}/deepthought
 		if [ -e ${PATH_LIBFT}/libft.a ]
-		then 
+		then
 			printf "\033[83G${COLOR_OK}found\n\n${DEFAULT}"
 		else
 			printf "\033[83G${COLOR_FAIL}not found\n\n${DEFAULT}"

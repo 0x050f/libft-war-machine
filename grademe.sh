@@ -6,7 +6,7 @@
 #    By: jtoty <jtoty@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/01/23 18:26:01 by jtoty             #+#    #+#              #
-#    Updated: 2019/10/11 16:16:52 by lmartin          ###   ########.fr        #
+#    Updated: 2019/10/13 19:29:55 by lmartin          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -241,7 +241,7 @@ do
 	activate_part=$(echo ACTIVATE_${part} | tr '[:lower:]' '[:upper:]' | rev | cut -c 6- | rev)
 	if [ ${!activate_part} -eq 1 ]
 	then
-		text="STARTING TESTS"
+		text="DON'T WORRY, IF YOU GOT A SIGABRT ON THE LAST TEST OF MEMCHR THAT'S A NORMAL BEHAVIOR ! (LST's functions didn't work aswell sry)"
 		printf "${COLOR_TITLE}"
 		printf "%.s${CHAR_LENGTH}" $(seq 1 ${TITLE_LENGTH})
 		printf "\n${CHAR_WIDTH}\033[$(( (${TITLE_LENGTH} - ${#text}) / 2 ))G${text}\033[${TITLE_LENGTH}G${CHAR_WIDTH}\n"

@@ -1,0 +1,93 @@
+= Host-specific information ====================================================
+$> hostname; uname -msr
+e1r2p4.42.fr
+Darwin 18.6.0 x86_64
+$> date
+Sun Oct 13 19:30:00 CEST 2019
+$> gcc --version
+Apple LLVM version 10.0.1 (clang-1001.0.46.4)
+Target: x86_64-apple-darwin18.6.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+$> clang --version
+Apple LLVM version 10.0.1 (clang-1001.0.46.4)
+Target: x86_64-apple-darwin18.6.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+
+= libft.h=======================================================================
+$> norminette libft.h | grep -E '(Error|Warning)'
+
+= Compiling libft ==============================================================
+$> make re
+/bin/rm -f ft_atoi.o ft_bzero.o ft_calloc.o ft_isalnum.o ft_isalpha.o ft_isascii.o ft_isdigit.o ft_isprint.o ft_itoa.o ft_memccpy.o ft_memchr.o ft_memcmp.o ft_memcpy.o ft_memccpy.o ft_memmove.o ft_memset.o ft_putchar_fd.o ft_putendl_fd.o ft_putnbr_fd.o ft_putstr_fd.o ft_split.o ft_strchr.o ft_strdup.o ft_strjoin.o ft_strlcat.o ft_strlcpy.o ft_strlen.o ft_strmapi.o ft_strncmp.o ft_strnstr.o ft_strrchr.o ft_strtrim.o ft_substr.o ft_tolower.o ft_toupper.o ft_lstadd_back_bonus.o ft_lstadd_front_bonus.o ft_lstclear_bonus.o ft_lstdelone_bonus.o ft_lstiter_bonus.o ft_lstlast_bonus.o ft_lstmap_bonus.o ft_lstnew_bonus.o ft_lstsize_bonus.o
+/bin/rm -f libft.a
+gcc -Wall -Wextra -Werror -c ft_atoi.c -o ft_atoi.o
+gcc -Wall -Wextra -Werror -c ft_bzero.c -o ft_bzero.o
+gcc -Wall -Wextra -Werror -c ft_calloc.c -o ft_calloc.o
+gcc -Wall -Wextra -Werror -c ft_isalnum.c -o ft_isalnum.o
+gcc -Wall -Wextra -Werror -c ft_isalpha.c -o ft_isalpha.o
+gcc -Wall -Wextra -Werror -c ft_isascii.c -o ft_isascii.o
+gcc -Wall -Wextra -Werror -c ft_isdigit.c -o ft_isdigit.o
+gcc -Wall -Wextra -Werror -c ft_isprint.c -o ft_isprint.o
+gcc -Wall -Wextra -Werror -c ft_itoa.c -o ft_itoa.o
+gcc -Wall -Wextra -Werror -c ft_memccpy.c -o ft_memccpy.o
+gcc -Wall -Wextra -Werror -c ft_memchr.c -o ft_memchr.o
+gcc -Wall -Wextra -Werror -c ft_memcmp.c -o ft_memcmp.o
+gcc -Wall -Wextra -Werror -c ft_memcpy.c -o ft_memcpy.o
+gcc -Wall -Wextra -Werror -c ft_memmove.c -o ft_memmove.o
+gcc -Wall -Wextra -Werror -c ft_memset.c -o ft_memset.o
+gcc -Wall -Wextra -Werror -c ft_putchar_fd.c -o ft_putchar_fd.o
+gcc -Wall -Wextra -Werror -c ft_putendl_fd.c -o ft_putendl_fd.o
+gcc -Wall -Wextra -Werror -c ft_putnbr_fd.c -o ft_putnbr_fd.o
+gcc -Wall -Wextra -Werror -c ft_putstr_fd.c -o ft_putstr_fd.o
+gcc -Wall -Wextra -Werror -c ft_split.c -o ft_split.o
+gcc -Wall -Wextra -Werror -c ft_strchr.c -o ft_strchr.o
+gcc -Wall -Wextra -Werror -c ft_strdup.c -o ft_strdup.o
+gcc -Wall -Wextra -Werror -c ft_strjoin.c -o ft_strjoin.o
+gcc -Wall -Wextra -Werror -c ft_strlcat.c -o ft_strlcat.o
+gcc -Wall -Wextra -Werror -c ft_strlcpy.c -o ft_strlcpy.o
+gcc -Wall -Wextra -Werror -c ft_strlen.c -o ft_strlen.o
+gcc -Wall -Wextra -Werror -c ft_strmapi.c -o ft_strmapi.o
+gcc -Wall -Wextra -Werror -c ft_strncmp.c -o ft_strncmp.o
+gcc -Wall -Wextra -Werror -c ft_strnstr.c -o ft_strnstr.o
+gcc -Wall -Wextra -Werror -c ft_strrchr.c -o ft_strrchr.o
+gcc -Wall -Wextra -Werror -c ft_strtrim.c -o ft_strtrim.o
+gcc -Wall -Wextra -Werror -c ft_substr.c -o ft_substr.o
+gcc -Wall -Wextra -Werror -c ft_tolower.c -o ft_tolower.o
+gcc -Wall -Wextra -Werror -c ft_toupper.c -o ft_toupper.o
+ar rc libft.a ft_atoi.o ft_bzero.o ft_calloc.o ft_isalnum.o ft_isalpha.o ft_isascii.o ft_isdigit.o ft_isprint.o ft_itoa.o ft_memccpy.o ft_memchr.o ft_memcmp.o ft_memcpy.o ft_memccpy.o ft_memmove.o ft_memset.o ft_putchar_fd.o ft_putendl_fd.o ft_putnbr_fd.o ft_putstr_fd.o ft_split.o ft_strchr.o ft_strdup.o ft_strjoin.o ft_strlcat.o ft_strlcpy.o ft_strlen.o ft_strmapi.o ft_strncmp.o ft_strnstr.o ft_strrchr.o ft_strtrim.o ft_substr.o ft_tolower.o ft_toupper.o
+ranlib libft.a
+
+$> ls -la libft.a
+-rw-r--r--  1 lmartin  2019_paris  33168 Oct 13 19:30 ../libft-git-42/libft.a
+
+= Part1_functions ==============================================================
+
+= ft_memset.c ==================================================================
+$> norminette ft_memset.c | grep -E '(Error|Warning)'
+$> clang -Wextra -Wall -Werror -g3 -fsanitize=address ft_memset.c main.c libft.a -o user_exe
+
+= Test 1 ===================================================
+$> ./user_exe 01
+$> diff -U 3 user_output_test01 test01.output
+
+Diff OK :D
+= Test 2 ===================================================
+$> ./user_exe 02
+$> diff -U 3 user_output_test02 test02.output
+
+Diff OK :D
+= Test 3 ===================================================
+$> ./user_exe 03
+$> diff -U 3 user_output_test03 test03.output
+
+Diff OK :D
+= Test 4 ===================================================
+$> ./user_exe 04
+$> diff -U 3 user_output_test04 test04.output
+
+Diff OK :D
+
+= ft_bzero.c ===================================================================
+$> norminette ft_bzero.c | grep -E '(Error|Warning)'
