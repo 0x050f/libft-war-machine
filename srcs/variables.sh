@@ -6,7 +6,7 @@
 #    By: jtoty <jtoty@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/01/23 18:27:13 by jtoty             #+#    #+#              #
-#    Updated: 2019/10/17 20:51:41 by xinwang          ###   ########.fr        #
+#    Updated: 2019/10/17 21:18:35 by xinwang          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -128,3 +128,4 @@ CHECK_IN_PART1=1
 CHECK_IN_PART2=1
 CHECK_IN_BONUS=1
 CHECK_IN_ADDITIONAL=1
+CUSTOM_DIRECTORY=1

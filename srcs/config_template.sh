@@ -19,14 +19,6 @@ PATH_LIBFT=~/libft
 #PATH_LIBFT="/home/user/libft"	==> Right
 
 
-#################################
-# CUSTOM HEADER & SRC DIRECTORY #
-#################################
-# If you use custom directories for your code source
-# set the bellow variable as 1
-CUSTOM_DIRECTORY=0
-
-
 ##############
 # HEADER DIR #
 ##############

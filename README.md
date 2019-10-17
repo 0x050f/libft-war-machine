@@ -55,13 +55,11 @@ The following variables must be set:
 ```
 HEADER_DIR
 SRC_DIR
-CUSTOM_DIRECTORY
 ```
 Exemple:
 ```
 HEADER_DIR="includes"
 SRC_DIR="srcs"
-CUSTOM_DIRECTORY=1
 ```
 
 
