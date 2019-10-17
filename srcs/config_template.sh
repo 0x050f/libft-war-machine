@@ -18,9 +18,34 @@ PATH_LIBFT=~/libft
 #PATH_LIBFT=/home/user/libft	==> Right
 #PATH_LIBFT="/home/user/libft"	==> Right
 
+
+#################################
+# CUSTOM HEADER & SRC DIRECTORY #
+#################################
+# If you use custom directories for your code source
+# set the bellow variable as 1
+CUSTOM_DIRECTORY=0
+
+
+##############
+# HEADER DIR #
+##############
+# Edit with the name of your header's directory
+# Keep it empty if you have your header file in your main directory
+HEADER_DIR=""
+
+###########
+# SRC DIR #
+###########
+# Edit with the name of your sources' directory
+# Keep it empty if you have your header file in your main directory
+SRC_DIR=""
+
+
 ###################################
 #     Optionnal configuration     #
 ###################################
+
 
 #By default, the deepthought file will be generated in the grademe directory.
 #Edit the next line with an absolute path if you want to change it.

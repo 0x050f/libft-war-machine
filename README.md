@@ -47,6 +47,24 @@ project.
 You can also choose the colors that will be used and the path where the
 deepthought file will be created.
 
+#### Custom directories
+
+If you use custom directories for your header and source files; you should specify there name in my_config.sh.
+
+The following variables must be set:
+```
+HEADER_DIR
+SRC_DIR
+CUSTOM_DIRECTORY
+```
+Exemple:
+```
+HEADER_DIR="includes"
+SRC_DIR="srcs"
+CUSTOM_DIRECTORY=1
+```
+
+
 ## Running script
 
 Go to the directory where you cloned and run the script
