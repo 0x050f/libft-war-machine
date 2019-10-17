@@ -6,7 +6,7 @@
 #    By: jtoty <jtoty@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/01/23 18:27:09 by jtoty             #+#    #+#              #
-#    Updated: 2019/10/17 20:16:53 by xinwang          ###   ########.fr        #
+#    Updated: 2019/10/17 20:51:04 by xinwang          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,6 +19,7 @@ check_turned_in_file()
 	printf "\n${text}" >> ${PATH_DEEPTHOUGHT}/deepthought
 	printf "%.s=" $(seq 1 $(( 80 - ${#text} ))) >> ${PATH_DEEPTHOUGHT}/deepthought
 	printf "\n" >> ${PATH_DEEPTHOUGHT}/deepthought
+
 	if [ -e ${PATH_LIBFT}/${SRC_DIR}/$1 ]
 	then
 		retvalue=1
