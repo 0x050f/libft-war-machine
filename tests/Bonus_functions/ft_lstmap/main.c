@@ -6,7 +6,7 @@
 /*   By: jtoty <jtoty@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/28 15:16:21 by jtoty             #+#    #+#             */
-/*   Updated: 2019/10/11 17:36:33 by lmartin          ###   ########.fr       */
+/*   Updated: 2019/10/18 02:49:22 by xinwang          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,7 +74,7 @@ int main(int argc, const char *argv[])
 	t_list		*list;
 	char		str [] = "lorem";
 	char		str2 [] = "ipsum";
-	char		str3 [] = "dolor";
+	char		str3 [] = "dalar";
 	char		str4 [] = "sit";
 
 	elem = ft_lstnewone(str);
