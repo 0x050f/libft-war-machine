@@ -6,7 +6,7 @@
 #    By: jtoty <jtoty@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/01/23 18:26:01 by jtoty             #+#    #+#              #
-#    Updated: 2019/10/13 19:29:55 by lmartin          ###   ########.fr        #
+#    Updated: 2019/10/17 20:45:01 by xinwang          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -139,7 +139,7 @@ fi
 
 source ${PATH_TEST}/my_config.sh
 
-if [ ${DIRECTORY} -eq 1 ]
+if [ ${CUSTOM_DIRECTORY} -eq 1 ]
 then
 	if [ -d ${PATH_TEST}/dirlibft ]
 	then
@@ -147,10 +147,14 @@ then
 	fi
 	printf "Copying files...\nPlease wait a moment.\n"
 	mkdir ${PATH_TEST}/dirlibft
-	cp -r ${PATH_LIBFT}/* ${PATH_TEST}/dirlibft
+	mkdir ${PATH_TEST}/dirlibft/${SRC_DIR}
+	mkdir ${PATH_TEST}/dirlibft/${HEADER_DIR}
+	cp ${PATH_LIBFT}/* ${PATH_TEST}/dirlibft
+	cp ${PATH_LIBFT}/${SRC_DIR}/*.c ${PATH_TEST}/dirlibft/${SRC_DIR}
+	cp ${PATH_LIBFT}/${HEADER_DIR}/*.h ${PATH_TEST}/dirlibft/${HEADER_DIR}
 	#find ${PATH_LIBFT} -type f -name "*.[ch]" -print | xargs cp -t ${PATH_TEST}/dirlibft
-	find ${PATH_LIBFT} -type f -name "*.[ch]" -exec cp {} ${PATH_TEST}/dirlibft  \;
 	PATH_LIBFT=${PATH_TEST}/dirlibft
+#	sleep 1000
 fi
 
 for part in ${tab_all_part[*]}
@@ -251,9 +255,9 @@ do
 	fi
 done
 
-if [ -e ${PATH_LIBFT}/libft.h ]
+if [ -e ${PATH_LIBFT}/${HEADER_DIR}/libft.h ]
 then
-	cp ${PATH_LIBFT}/libft.h ${PATH_TEST}
+	cp ${PATH_LIBFT}/${HEADER_DIR}/libft.h ${PATH_TEST}
 fi
 
 printf "#include \"libft.h\"\n\nint\tmain(void)\n{\n\treturn (0);\n}" > ${PATH_TEST}/main_check_cheating.c
@@ -301,3 +305,7 @@ then
 fi
 printf "A deepthought file has been generated in ${COLOR_DEEPTHOUGHT_PATH}${PATH_DEEPTHOUGHT}\n\n${DEFAULT}"
 make --no-print-directory -C ${PATH_LIBFT} fclean > /dev/null
+
+# nuke_it_all
+find ${PATH_TEST} -name 'user_output_test*' -delete
+rm -rf ${PATH_TEST}/dirlibft/
