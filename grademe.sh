@@ -6,7 +6,7 @@
 #    By: jtoty <jtoty@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/01/23 18:26:01 by jtoty             #+#    #+#              #
-#    Updated: 2019/10/17 20:45:01 by xinwang          ###   ########.fr        #
+#    Updated: 2019/10/18 15:51:42 by cchudant         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -237,21 +237,6 @@ do
 	if [ ${!opt_part} -eq 0 ]
 	then
 		(( ${activate_part}=1 ))
-	fi
-done
-
-for part in ${tab_all_part[*]}
-do
-	activate_part=$(echo ACTIVATE_${part} | tr '[:lower:]' '[:upper:]' | rev | cut -c 6- | rev)
-	if [ ${!activate_part} -eq 1 ]
-	then
-		text="DON'T WORRY, IF YOU GOT A SIGABRT ON THE LAST TEST OF MEMCHR THAT'S A NORMAL BEHAVIOR ! (LST's functions didn't work aswell sry)"
-		printf "${COLOR_TITLE}"
-		printf "%.s${CHAR_LENGTH}" $(seq 1 ${TITLE_LENGTH})
-		printf "\n${CHAR_WIDTH}\033[$(( (${TITLE_LENGTH} - ${#text}) / 2 ))G${text}\033[${TITLE_LENGTH}G${CHAR_WIDTH}\n"
-		printf "%.s${CHAR_LENGTH}" $(seq 1 ${TITLE_LENGTH})
-		printf "\n${DEFAULT}"
-		break
 	fi
 done
 
