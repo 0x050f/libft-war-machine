@@ -18,7 +18,7 @@ compilation()
 	then
 		rm -f ${PATH_TEST}/user_exe
 	fi
-	printf "$> clang -Wextra -Wall -Werror $1 main.c libft.a -o user_exe\n\n" >> ${PATH_DEEPTHOUGHT}/deepthought
+	printf "$> clang -Wextra -Wall -Werror -g3 -fsanitize=address $1 main.c libft.a -o user_exe\n\n" >> ${PATH_DEEPTHOUGHT}/deepthought
 	clang -Wextra -Wall -Werror ${PATH_TEST}/dirlibft/${SRC_DIR}/$1 \
 		  ${PATH_TEST}/tests/$(echo ${part}tions)/$(echo $1 | cut -d . -f 1)/main.c \
 		  -I ${PATH_LIBFT}/${HEADER_DIR}/ \
