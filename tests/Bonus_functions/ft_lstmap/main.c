@@ -6,7 +6,7 @@
 /*   By: jtoty <jtoty@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/28 15:16:21 by jtoty             #+#    #+#             */
-/*   Updated: 2019/10/18 02:49:22 by xinwang          ###   ########.fr       */
+/*   Updated: 2019/10/18 15:07:58 by dh4rm4           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,6 +65,11 @@ void	*ft_map(void *ct)
 	return (c);
 }
 
+void    ft_del(void *content)
+{
+	free(content);
+}
+
 int main(int argc, const char *argv[])
 {
 	t_list		*elem;
@@ -89,7 +94,7 @@ int main(int argc, const char *argv[])
 	elem3->next = elem4;
 	if (atoi(argv[1]) == 1)
 	{
-		if (!(list = ft_lstmap(elem, &ft_map)))
+		if (!(list = ft_lstmap(elem, &ft_map, &ft_del)))
 			return (0);
 		if (list == elem)
 			write(1, "A new list is not returned\n", 27);
