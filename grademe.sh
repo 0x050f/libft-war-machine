@@ -19,8 +19,8 @@ PATH_TEST="$(cd "$(dirname "$0")" && pwd -P)"
 exec 2> /dev/null
 
 source ${PATH_TEST}/srcs/variables.sh
-printf "\x1b[31mAssembly will win!\x1b[0m\n";
-printf "\x1b[34mNo one can beat the Assembly\x1b[0m\n"
+printf "\x1b[31mOrder will win!\x1b[0m\n";
+printf "\x1b[34mNo one can beat the order\x1b[0m\n"
 
 
 for arg in ${@}
