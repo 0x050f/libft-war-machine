@@ -16,7 +16,8 @@ check_norme()
 {
 	printf "$> norminette ${1} | grep -E '(Error|Warning)'\n" >>${PATH_DEEPTHOUGHT}/deepthought
  	printf "\033[${NORME_COL}G"
-	NORME_VAR=$(norminette ${PATH_LIBFT}/$1 2>&1)
+	TMP_NORM=norminette ${PATH_LIBFT}/$1 2>tmp/norm
+	NORME_VAR=${TMP_NORM}
 	if echo "$NORME_VAR" | grep -q command
 	then
 		printf "${COLOR_WARNING}not found${DEFAULT}"
