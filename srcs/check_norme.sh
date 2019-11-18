@@ -6,7 +6,7 @@
 #    By: jtoty <jtoty@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/01/23 18:26:23 by jtoty             #+#    #+#              #
-#    Updated: 2017/01/23 18:26:24 by jtoty            ###   ########.fr        #
+#    Updated: 2019/11/18 01:41:47 by gbudau           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ check_norme()
 {
 	printf "$> norminette ${1} | grep -E '(Error|Warning)'\n" >>${PATH_DEEPTHOUGHT}/deepthought
  	printf "\033[${NORME_COL}G"
-	NORME_VAR=$(norminette ${PATH_LIBFT}/$1 2>&1)
+	NORME_VAR=$(norminette ${PATH_LIBFT}/**/*$1 2>&1)
 	if echo "$NORME_VAR" | grep -q command
 	then
 		printf "${COLOR_WARNING}not found${DEFAULT}"
