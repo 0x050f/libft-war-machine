@@ -6,7 +6,7 @@
 /*   By: jtoty <jtoty@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/28 12:35:18 by jtoty             #+#    #+#             */
-/*   Updated: 2019/12/04 21:48:28 by lmartin          ###   ########.fr       */
+/*   Updated: 2019/12/04 21:51:40 by lmartin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,6 @@ void	ft_print_result(char const *s)
 	while (s[len])
 		len++;
 	write(1, s, len);
-	free(s);
 }
 
 int		main(int argc, const char *argv[])
