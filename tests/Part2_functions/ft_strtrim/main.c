@@ -6,7 +6,7 @@
 /*   By: jtoty <jtoty@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/28 12:35:29 by jtoty             #+#    #+#             */
-/*   Updated: 2019/12/04 21:45:30 by lmartin          ###   ########.fr       */
+/*   Updated: 2019/12/04 21:46:43 by lmartin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,6 @@ void	ft_print_result(char const *s)
 	while (s[len])
 		len++;
 	write(1, s, len);
-	len = 0;
-	while (s[len])
-		free(s[len]);
 	free(s);
 }
 
