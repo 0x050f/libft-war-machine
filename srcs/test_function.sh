@@ -6,7 +6,7 @@
 #    By: jtoty <jtoty@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/01/23 18:27:09 by jtoty             #+#    #+#              #
-#    Updated: 2019/10/17 20:51:04 by xinwang          ###   ########.fr        #
+#    Updated: 2021/02/04 07:13:42 by lmartin          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -62,7 +62,7 @@ test_function()
 		then
 		let	"total += 1"
 			printf "${COLOR_FUNC}"
-			func_name=$(echo "$function" | cut -d . -f 1)
+			func_name=$(echo "$function" | cut -d . -f 1 | sed 's/_bonus//g')
 			printf "${func_name}"
 			check_turned_in_file $function
 			file=$?

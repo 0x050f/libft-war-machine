@@ -6,7 +6,7 @@
 #    By: jtoty <jtoty@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/01/23 18:26:36 by jtoty             #+#    #+#              #
-#    Updated: 2019/11/14 02:03:41 by mle-floc         ###   ########.fr        #
+#    Updated: 2021/02/04 07:52:23 by lmartin          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -41,6 +41,7 @@ func_compil_lib()
 			printf "\033[17Gmake \$(NAME)"
 			printf "\033[34Gmake fclean"
 			printf "\033[51Gmake re"
+			printf "\033[34Gmake bonus"
 			printf "\033[67Gmake clean"
 			printf "\033[83Glibft.a\n"
 		else
@@ -48,6 +49,7 @@ func_compil_lib()
 			printf "\033[17Grule \$(NAME)"
 			printf "\033[34Grule clean"
 			printf "\033[51Grule fclean"
+			printf "\033[34Grule bonus"
 			printf "\033[67Gmake re"
 			printf "\033[83Glibft.a\n"
 		fi
@@ -184,6 +186,10 @@ func_compil_lib()
 				fi
 			fi
 		fi
+
+		rm -f ${PATH_LIBFT}/ft_*.o
+		printf "\n$> make bonus\n" >> ${PATH_DEEPTHOUGHT}/deepthought
+		make --no-print-directory -C ${PATH_LIBFT} bonus>>${PATH_DEEPTHOUGHT}/deepthought 2>&1
 
 		printf "\n$> ls -la libft.a\n" >> ${PATH_DEEPTHOUGHT}/deepthought
 		ls -la ${PATH_LIBFT}/libft.a >> ${PATH_DEEPTHOUGHT}/deepthought

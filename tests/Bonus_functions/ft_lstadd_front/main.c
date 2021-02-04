@@ -6,7 +6,7 @@
 /*   By: jtoty <jtoty@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/28 15:15:25 by jtoty             #+#    #+#             */
-/*   Updated: 2019/10/09 12:19:39 by lmartin          ###   ########.fr       */
+/*   Updated: 2021/02/04 07:54:31 by lmartin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ void	ft_print_result(t_list *elem)
 	write(1, "\n", 1);
 }
 
-t_list	*ft_lstnewone(void const *content)
+t_list	*ft_lstnewone(void *content)
 {
 	t_list	*elem;
 
@@ -34,15 +34,9 @@ t_list	*ft_lstnewone(void const *content)
 	if (!elem)
 		return (NULL);
 	if (!content)
-	{
 		elem->content = NULL;
-	}
 	else
-	{
-		if (!(elem->content = malloc(sizeof(*(elem->content)) * sizeof(content))))
-			return (NULL);
-		elem->content = memcpy(elem->content, content, sizeof(content));
-	}
+		elem->content = content;
 	elem->next = NULL;
 	return (elem);
 }
@@ -54,11 +48,10 @@ int main(int argc, const char *argv[])
 	t_list		*elem2;
 	t_list		*elem3;
 	t_list		*elem4;
-
-	char		str [] = "lorem";
-	char		str2 [] = "ipsum";
-	char		str3 [] = "dolor";
-	char		str4 [] = "sit";
+	char		*str = strdup("lorem");
+	char		*str2 = strdup("ipsum");
+	char		*str3 = strdup("dolor");
+	char		*str4 = strdup("sit");
 
 	elem = ft_lstnewone(str);
 	elem2 = ft_lstnewone(str2);

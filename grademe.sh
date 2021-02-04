@@ -6,7 +6,7 @@
 #    By: jtoty <jtoty@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/01/23 18:26:01 by jtoty             #+#    #+#              #
-#    Updated: 2019/11/14 02:08:20 by mle-floc         ###   ########.fr        #
+#    Updated: 2021/02/04 07:07:10 by lmartin          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,9 +19,6 @@ PATH_TEST="$(cd "$(dirname "$0")" && pwd -P)"
 exec 2> /dev/null
 
 source ${PATH_TEST}/srcs/variables.sh
-printf "\x1b[31mOrder will win!\x1b[0m\n";
-printf "\x1b[34mNo one can beat the order\x1b[0m\n"
-
 
 for arg in ${@}
 do
@@ -240,21 +237,6 @@ do
 	if [ ${!opt_part} -eq 0 ]
 	then
 		(( ${activate_part}=1 ))
-	fi
-done
-
-for part in ${tab_all_part[*]}
-do
-	activate_part=$(echo ACTIVATE_${part} | tr '[:lower:]' '[:upper:]' | rev | cut -c 6- | rev)
-	if [ ${!activate_part} -eq 1 ]
-	then
-		text="The Order Will Win ! No one can beat the order"
-		printf "${COLOR_TITLE}"
-		printf "%.s${CHAR_LENGTH}" $(seq 1 ${TITLE_LENGTH})
-		printf "\n${CHAR_WIDTH}\033[$(( (${TITLE_LENGTH} - ${#text}) / 2 ))G${text}\033[${TITLE_LENGTH}G${CHAR_WIDTH}\n"
-		printf "%.s${CHAR_LENGTH}" $(seq 1 ${TITLE_LENGTH})
-		printf "\n${DEFAULT}"
-		break
 	fi
 done
 

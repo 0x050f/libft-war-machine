@@ -6,7 +6,7 @@
 #    By: jtoty <jtoty@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/01/23 18:26:48 by jtoty             #+#    #+#              #
-#    Updated: 2019/10/09 07:51:17 by lmartin          ###   ########.fr        #
+#    Updated: 2021/02/04 07:13:02 by lmartin          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ diff_test()
 {
 	printf "\033[${TEST_COL}G"
 	let "k=1"
-	cd ${PATH_TEST}/tests/$(echo ${part}tions)/$(echo $1 | cut -d . -f 1)
+	cd ${PATH_TEST}/tests/$(echo ${part}tions)/$(echo $1 | cut -d . -f 1 | sed 's/_bonus//g')
 	kmax=$(ls -l *.output | wc -l)
 	cd ${PATH_TEST}
 	retvalue=1
@@ -36,9 +36,9 @@ diff_test()
 		if [ $(( $k%2 )) -eq 1 ] && ([ $1 == "ft_putchar_fd.c" ] || [ $1 == "ft_putstr_fd.c" ] || [ $1 == "ft_putendl_fd.c" ] || [ $1 == "ft_putnbr_fd.c" ])
 		then
 			#${PATH_TEST}/user_exe $k > ${PATH_TEST}/tests/$(echo ${part}tions)/$(echo $1 | cut -d . -f 1)/user_output_test${text}$k 2>&1
-			${PATH_TEST}/user_exe $k > /dev/null 2> ${PATH_TEST}/tests/$(echo ${part}tions)/$(echo $1 | cut -d . -f 1)/user_output_test${text}$k
+			${PATH_TEST}/user_exe $k > /dev/null 2> ${PATH_TEST}/tests/$(echo ${part}tions)/$(echo $1 | cut -d . -f 1 | sed 's/_bonus//g')/user_output_test${text}$k
 		else
-			${PATH_TEST}/user_exe $k > ${PATH_TEST}/tests/$(echo ${part}tions)/$(echo $1 | cut -d . -f 1)/user_output_test${text}$k
+			${PATH_TEST}/user_exe $k > ${PATH_TEST}/tests/$(echo ${part}tions)/$(echo $1 | cut -d . -f 1 | sed 's/_bonus//g')/user_output_test${text}$k
 		fi
 		SIG=$?
 		if [ $SIG -eq 134 ]
@@ -62,9 +62,9 @@ diff_test()
 			printf "${COLOR_FAIL}T${DEFAULT}"
 			retvalue=0
 		else
-			DIFF=$(diff -U 3 ${PATH_TEST}/tests/$(echo ${part}tions)/$(echo $1 | cut -d . -f 1)/user_output_test${text}$k ${PATH_TEST}/tests/$(echo ${part}tions)/$(echo $1 | cut -d  . -f 1)/test${text}$k.output)
+			DIFF=$(diff -U 3 ${PATH_TEST}/tests/$(echo ${part}tions)/$(echo $1 | cut -d . -f 1 | sed 's/_bonus//g')/user_output_test${text}$k ${PATH_TEST}/tests/$(echo ${part}tions)/$(echo $1 | cut -d  . -f 1)/test${text}$k.output)
 			printf "$> diff -U 3 user_output_test${text}$k test${text}$k.output\n" >> ${PATH_DEEPTHOUGHT}/deepthought
-			if [ "$DIFF" != "" ] || [ ! -e ${PATH_TEST}/tests/$(echo ${part}tions)/$(echo $1 | cut -d . -f 1)/user_output_test${text}$k ]
+			if [ "$DIFF" != "" ] || [ ! -e ${PATH_TEST}/tests/$(echo ${part}tions)/$(echo $1 | cut -d . -f 1 | sed 's/_bonus//g')/user_output_test${text}$k ]
 			then
 				#diff -U 3 ${PATH_TEST}/tests/$(echo ${part}tions)/$(echo $1 | cut -d . -f 1)/user_output_test${text}$k ${PATH_TEST}/tests/$(echo ${part}tions)/$(echo $1 | cut -d  . -f 1)/test${text}$k.output | cat -e >> ${PATH_DEEPTHOUGHT}/deepthought
 				echo "${DIFF}" | cat -e >> ${PATH_DEEPTHOUGHT}/deepthought

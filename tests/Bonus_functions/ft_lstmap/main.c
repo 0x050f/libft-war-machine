@@ -6,7 +6,7 @@
 /*   By: jtoty <jtoty@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/28 15:16:21 by jtoty             #+#    #+#             */
-/*   Updated: 2019/10/18 15:07:58 by dh4rm4           ###   ########.fr       */
+/*   Updated: 2021/02/04 07:58:38 by lmartin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ void	ft_print_result(t_list *elem)
 	write(1, "\n", 1);
 }
 
-t_list	*ft_lstnewone(void const *content)
+t_list	*ft_lstnewone(void *content)
 {
 	t_list	*elem;
 
@@ -35,15 +35,9 @@ t_list	*ft_lstnewone(void const *content)
 	if (!elem)
 		return (NULL);
 	if (!content)
-	{
 		elem->content = NULL;
-	}
 	else
-	{
-		if (!(elem->content = malloc(sizeof(*(elem->content)) * sizeof(elem->content))))
-			return (NULL);
-		elem->content = memcpy(elem->content, content, sizeof(elem->content));
-	}
+		elem->content = content;
 	elem->next = NULL;
 	return (elem);
 }
@@ -54,9 +48,7 @@ void	*ft_map(void *ct)
 	void	*c;
 	char	*pouet;
 
-	if (!(c = malloc(sizeof(*(c)) * sizeof(c))))
-		return (NULL);
-	c = memcpy(c, ct, sizeof(c));
+	c = ct;
 	i = -1;
 	pouet = (char *)c;
 	while (pouet[++i])
@@ -77,10 +69,10 @@ int main(int argc, const char *argv[])
 	t_list		*elem3;
 	t_list		*elem4;
 	t_list		*list;
-	char		str [] = "lorem";
-	char		str2 [] = "ipsum";
-	char		str3 [] = "dalar";
-	char		str4 [] = "sit";
+	char		*str = strdup("lorem");
+	char		*str2 = strdup("ipsum");
+	char		*str3 = strdup("dolor");
+	char		*str4 = strdup("sit");
 
 	elem = ft_lstnewone(str);
 	elem2 = ft_lstnewone(str2);

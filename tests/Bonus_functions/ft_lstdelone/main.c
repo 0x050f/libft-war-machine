@@ -6,7 +6,7 @@
 /*   By: jtoty <jtoty@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/28 15:15:51 by jtoty             #+#    #+#             */
-/*   Updated: 2019/10/10 13:47:36 by lmartin          ###   ########.fr       */
+/*   Updated: 2021/02/04 07:28:31 by lmartin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,7 @@
 
 void	ft_print_result(t_list *elem)
 {
-	int		len;
-
-	len = 0;
-	while (((char *)elem->content)[len])
-		len++;
-	write(1, elem->content, len);
+	write(1, elem->content, strlen(elem->content));
 }
 
 void	ft_del(void *content)
@@ -31,7 +26,7 @@ void	ft_del(void *content)
 	free(content);
 }
 
-t_list	*ft_lstnewone(void const *content)
+t_list	*ft_lstnewone(void *content)
 {
 	t_list	*elem;
 
@@ -39,18 +34,9 @@ t_list	*ft_lstnewone(void const *content)
 	if (!elem)
 		return (NULL);
 	if (!content)
-	{
 		elem->content = NULL;
-	}
 	else
-	{
-		if (!(elem->content = malloc(sizeof(*(elem->content)) * sizeof(content))))
-		{
-			free(elem);
-			return (NULL);
-		}
-		elem->content = memcpy(elem->content, content, sizeof(content));
-	}
+		elem->content = content;
 	elem->next = NULL;
 	return (elem);
 }
@@ -61,10 +47,10 @@ int main(int argc, const char *argv[])
 	t_list		*elem2;
 	t_list		*elem3;
 	t_list		*elem4;
-	char		str [] = "lorem";
-	char		str2 [] = "ipsum";
-	char		str3 [] = "dolor";
-	char		str4 [] = "sit";
+	char		*str = strdup("lorem");
+	char		*str2 = strdup("ipsum");
+	char		*str3 = strdup("dolor");
+	char		*str4 = strdup("sit");
 
 	elem = ft_lstnewone(str);
 	elem2 = ft_lstnewone(str2);
@@ -86,11 +72,6 @@ int main(int argc, const char *argv[])
 		write(1, "\n", 1);
 		if (elem2)
 			ft_print_result(elem2);
-		else
-			write(1, "NULL", 4);
-		write(1, "\n", 1);
-		if (elem3)
-			ft_print_result(elem3);
 		else
 			write(1, "NULL", 4);
 		write(1, "\n", 1);
