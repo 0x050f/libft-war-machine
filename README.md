@@ -2,8 +2,7 @@
 This is an edit of prev libftest made by @jtoty to fit with the 2019 project libft. <br/>
 (ORIGINAL REP : https://github.com/jtoty/Libftest) <br/>
 This update was made by @lmartin <br/>
-Some things may not work (especially bonus part with lst functions), and things aren't tested. <br/>
-I will try to update this (@lmartin).
+Version updated, now bonus functions work if your files are named "_bonus.c"
 
 # Libftest
 <img align="right" src="./srcs/img_readme.png" width="50%"/>
@@ -36,7 +35,7 @@ Makefile up to date.
 ### Installation
 
 ```bash
-git clone https://github.com/jtoty/Libftest
+git clone https://github.com/ska42/libft-war-machine
 ```
 
 ### Configuration
@@ -103,12 +102,13 @@ bash grademe.sh ft_atoi -f ft_strlen -n
 ```
 
 ### Supported functions
-All the supported functions are listed [on this page](https://github.com/jtoty/Libftest/blob/master/supported_functions.md).
+All the supported functions are listed [on this page](https://github.com/ska42/libft-war-machine/blob/master/supported_functions.md).
 ## Contribution
 
 Any suggestions or bugs reporting ?
-Contact jtoty@student.42.fr
+Contact lmartin@student.42.fr
 
 ### Contributors
+- jtoty : https://github.com/jtoty
 - jmichaud : https://github.com/MrJe
 - tlernoul
