@@ -1,10 +1,10 @@
-# WARNING
+# PREAMBLE
 This is an edit of prev libftest made by @jtoty to fit with the 2019 project libft. <br/>
 (ORIGINAL REP : https://github.com/jtoty/Libftest) <br/>
 This update was made by @lmartin <br/>
 Version updated, now bonus functions work if your files are named "_bonus.c"
 
-# Libftest
+# libft-war-machine
 <img align="right" src="./srcs/img_readme.png" width="50%"/>
 This repository contains script to test your libft project.
 The script will do the following tests :
