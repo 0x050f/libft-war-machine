@@ -6,7 +6,7 @@
 /*   By: jtoty <jtoty@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/28 12:34:58 by jtoty             #+#    #+#             */
-/*   Updated: 2019/10/11 15:23:30 by lmartin          ###   ########.fr       */
+/*   Updated: 2021/02/06 12:06:03 by lmartin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ int		main(int argc, const char *argv[])
 			ft_print_result("NULL");
 		else
 		{
-			while (tabstr[i] != '\0')
+			while (tabstr[i] != NULL)
 			{
 				ft_print_result(tabstr[i]);
 				write(1, "\n", 1);
@@ -54,7 +54,7 @@ int		main(int argc, const char *argv[])
 			ft_print_result("NULL");
 		else
 		{
-			while (tabstr[i] != '\0')
+			while (tabstr[i] != NULL)
 			{
 				ft_print_result(tabstr[i]);
 				write(1, "\n", 1);
@@ -68,7 +68,7 @@ int		main(int argc, const char *argv[])
 			ft_print_result("NULL");
 		else
 		{
-			while (tabstr[i] != '\0')
+			while (tabstr[i] != NULL)
 			{
 				ft_print_result(tabstr[i]);
 				write(1, "\n", 1);
@@ -82,7 +82,7 @@ int		main(int argc, const char *argv[])
 			ft_print_result("NULL");
 		else
 		{
-			while (tabstr[i] != '\0')
+			while (tabstr[i] != NULL)
 			{
 				ft_print_result(tabstr[i]);
 				write(1, "\n", 1);
@@ -96,7 +96,7 @@ int		main(int argc, const char *argv[])
 			ft_print_result("NULL");
 		else
 		{
-			while (tabstr[i] != '\0')
+			while (tabstr[i] != NULL)
 			{
 				ft_print_result(tabstr[i]);
 				write(1, "\n", 1);
