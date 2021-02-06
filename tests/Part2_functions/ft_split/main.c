@@ -40,7 +40,7 @@ int		main(int argc, const char *argv[])
 			ft_print_result("NULL");
 		else
 		{
-			while (tabstr[i] != '\0')
+			while (*tabstr[i] != '\0')
 			{
 				ft_print_result(tabstr[i]);
 				write(1, "\n", 1);
@@ -54,7 +54,7 @@ int		main(int argc, const char *argv[])
 			ft_print_result("NULL");
 		else
 		{
-			while (tabstr[i] != '\0')
+			while (*tabstr[i] != '\0')
 			{
 				ft_print_result(tabstr[i]);
 				write(1, "\n", 1);
@@ -68,7 +68,7 @@ int		main(int argc, const char *argv[])
 			ft_print_result("NULL");
 		else
 		{
-			while (tabstr[i] != '\0')
+			while (*tabstr[i] != '\0')
 			{
 				ft_print_result(tabstr[i]);
 				write(1, "\n", 1);
@@ -82,7 +82,7 @@ int		main(int argc, const char *argv[])
 			ft_print_result("NULL");
 		else
 		{
-			while (tabstr[i] != '\0')
+			while (*tabstr[i] != '\0')
 			{
 				ft_print_result(tabstr[i]);
 				write(1, "\n", 1);
@@ -96,7 +96,7 @@ int		main(int argc, const char *argv[])
 			ft_print_result("NULL");
 		else
 		{
-			while (tabstr[i] != '\0')
+			while (*tabstr[i] != '\0')
 			{
 				ft_print_result(tabstr[i]);
 				write(1, "\n", 1);
