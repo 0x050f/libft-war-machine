@@ -6,7 +6,7 @@
 /*   By: jtoty <jtoty@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/28 12:01:40 by jtoty             #+#    #+#             */
-/*   Updated: 2019/11/14 02:05:36 by mle-floc         ###   ########.fr       */
+/*   Updated: 2021/02/27 01:45:19 by lmartin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,7 +78,7 @@ int		main(int argc, const char *argv[])
 	{
 		int tab[7] = {-49, 49, 1, -1, 0, -2, 2};
 
-		printf("%s", ft_memchr(tab, -1, 7));
+		printf("%s", (char *)ft_memchr(tab, -1, 7));
 	}
        	return (0);
 }
