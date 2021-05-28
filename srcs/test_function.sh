@@ -25,19 +25,25 @@ check_turned_in_file()
 		retvalue=1
 		return "$retvalue"
 	else
-		printf "\033[${NORME_COL}G"
-		printf "${COLOR_FAIL}NTI${DEFAULT}"
-		printf "\033[${CHEAT_COL}G"
-		printf "${COLOR_FAIL}NTI${DEFAULT}"
-		printf "\033[${COMPIL_COL}G"
-		printf "${COLOR_FAIL}NTI${DEFAULT}"
-		printf "\033[${TEST_COL}G"
-		printf "${COLOR_FAIL}NTI${DEFAULT}"
-		printf "\033[${RESULT_COL}G"
-		printf "${COLOR_FAIL}NTI${DEFAULT}\n"
-		printf "Nothing turned in\n" >> ${PATH_DEEPTHOUGHT}/deepthought
-		retvalue=0
-		return "$retvalue"
+        if [ -e ${PATH_LIBFT}/${SRC_DIR}/$($1 | sed 's/_bonus//g') ]
+		then
+			retvalue=1
+			return "$retvalue"
+		else
+			printf "\033[${NORME_COL}G"
+			printf "${COLOR_FAIL}NTI${DEFAULT}"
+			printf "\033[${CHEAT_COL}G"
+			printf "${COLOR_FAIL}NTI${DEFAULT}"
+			printf "\033[${COMPIL_COL}G"
+			printf "${COLOR_FAIL}NTI${DEFAULT}"
+			printf "\033[${TEST_COL}G"
+			printf "${COLOR_FAIL}NTI${DEFAULT}"
+			printf "\033[${RESULT_COL}G"
+			printf "${COLOR_FAIL}NTI${DEFAULT}\n"
+			printf "Nothing turned in\n" >> ${PATH_DEEPTHOUGHT}/deepthought
+			retvalue=0
+			return "$retvalue"
+		fi
 	fi
 }
 
@@ -83,6 +89,12 @@ test_function()
 				compilation $function
 				check_compilation
 				check=$?
+				if [ $check -eq 0 ]
+				then
+					compilation $(echo ${function} | sed 's/_bonus//g')
+					check_compilation
+					check=$?
+				fi
 				if [ $check -eq 1 ]
 				then
 					if [ ${OPT_NO_FORBIDDEN} -eq 0 ]

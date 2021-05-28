@@ -84,7 +84,7 @@ do
 						while (( p < ${nb_func} ))
 						do
 							func_name=$(echo ${part}[$p])
-							if [ "$(echo ${arg} | grep -ow $(echo ${!func_name} | cut -d . -f 1))" != "" ]
+							if [ "$(echo ${arg} | sed 's/_bonus//g' | grep -ow $(echo ${!func_name} | cut -d . -f 1 | sed 's/_bonus//g'))" != "" ]
 							then
 								(( ${part}_activation[$p]=1 ))
 								#(( ${opt_part}=1 ))
