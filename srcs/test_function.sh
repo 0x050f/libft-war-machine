@@ -86,15 +86,14 @@ test_function()
 				else
 					printf "\033[${NORME_COL}G${DEFAULT}disabled"
 				fi
-				compilation $function
+				if [ -e ${PATH_TEST}/dirlibft/${SRC_DIR}/$1 ]
+				then
+					compilation $function
+				else
+					compilation $(echo ${function} | sed 's/_bonus//g')
+				fi
 				check_compilation
 				check=$?
-				if [ $check -eq 0 ]
-				then
-					compilation $(echo ${function} | sed 's/_bonus//g')
-					check_compilation
-					check=$?
-				fi
 				if [ $check -eq 1 ]
 				then
 					if [ ${OPT_NO_FORBIDDEN} -eq 0 ]
