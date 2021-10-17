@@ -14,18 +14,18 @@
 
 check_turned_in_file()
 {
-	source ${PATH_TEST}/my_config.sh
+	source "${PATH_TEST}"/my_config.sh
 	text="= $1 "
-	printf "\n${text}" >> ${PATH_DEEPTHOUGHT}/deepthought
-	printf "%.s=" $(seq 1 $(( 80 - ${#text} ))) >> ${PATH_DEEPTHOUGHT}/deepthought
-	printf "\n" >> ${PATH_DEEPTHOUGHT}/deepthought
+	printf "\n${text}" >> "${PATH_DEEPTHOUGHT}"/deepthought
+	printf "%.s=" $(seq 1 $(( 80 - ${#text} ))) >> "${PATH_DEEPTHOUGHT}"/deepthought
+	printf "\n" >> "${PATH_DEEPTHOUGHT}"/deepthought
 
-	if [ -e ${PATH_LIBFT}/${SRC_DIR}/$1 ]
+	if [ -e "${PATH_LIBFT}"/${SRC_DIR}/$1 ]
 	then
 		retvalue=1
 		return "$retvalue"
 	else
-        if [ -e ${PATH_LIBFT}/${SRC_DIR}/$($1 | sed 's/_bonus//g') ]
+        if [ -e "${PATH_LIBFT}"/${SRC_DIR}/$($1 | sed 's/_bonus//g') ]
 		then
 			retvalue=1
 			return "$retvalue"
@@ -40,7 +40,7 @@ check_turned_in_file()
 			printf "${COLOR_FAIL}NTI${DEFAULT}"
 			printf "\033[${RESULT_COL}G"
 			printf "${COLOR_FAIL}NTI${DEFAULT}\n"
-			printf "Nothing turned in\n" >> ${PATH_DEEPTHOUGHT}/deepthought
+			printf "Nothing turned in\n" >> "${PATH_DEEPTHOUGHT}"/deepthought
 			retvalue=0
 			return "$retvalue"
 		fi
@@ -86,7 +86,7 @@ test_function()
 				else
 					printf "\033[${NORME_COL}G${DEFAULT}disabled"
 				fi
-				if [ -e ${PATH_TEST}/dirlibft/${SRC_DIR}/$1 ]
+				if [ -e "${PATH_TEST}"/dirlibft/${SRC_DIR}/$1 ]
 				then
 					compilation $function
 				else
@@ -129,9 +129,9 @@ test_function()
 					let "success += 1"
 				fi
 			fi
-			if [ -e ${PATH_TEST}/user_exe ]
+			if [ -e "${PATH_TEST}"/user_exe ]
 			then
-				rm -f ${PATH_TEST}/user_exe
+				rm -f "${PATH_TEST}"/user_exe
 			fi
 		fi
 		let	"i += 1"

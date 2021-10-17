@@ -5,7 +5,7 @@
 ###################################
 
 #Edit the next line with the path of your libft project.
-PATH_LIBFT=../
+PATH_LIBFT="../"
 
 #If you use a relative path, don't put double quotes.
 #For example :
@@ -41,7 +41,7 @@ SRC_DIR=""
 
 #By default, the deepthought file will be generated in the grademe directory.
 #Edit the next line with an absolute path if you want to change it.
-PATH_DEEPTHOUGHT=${PATH_TEST}
+PATH_DEEPTHOUGHT="${PATH_TEST}"
 
 #You can chose color and text effect.
 #Colors available :
