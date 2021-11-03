@@ -23,19 +23,19 @@
 #'0' '0' '0' '0' '0' \
 #'0' '0' '0' '0')
 
-Part1_func_authorized=('7' '7' '7' '7' '7' \
+Part1_func_authorized=('7' '7' '7' '7' \
 '7' '7' '7' '7' '7' \
 '7' '7' '7' '7' '7' \
 '7' '7' '7' '7' '7' \
 '7' '7' '7' '7')
 
-Part1_func_activation=('0' '0' '0' '0' '0' \
+Part1_func_activation=('0' '0' '0' '0' \
 '0' '0' '0' '0' '0' \
 '0' '0' '0' '0' '0' \
 '0' '0' '0' '0' '0' \
 '0' '0' '0' '0' '0')
 
-Part1_func=('ft_memset.c' 'ft_bzero.c' 'ft_calloc.c' 'ft_memcpy.c' 'ft_memccpy.c' 'ft_memmove.c' \
+Part1_func=('ft_memset.c' 'ft_bzero.c' 'ft_calloc.c' 'ft_memcpy.c' 'ft_memmove.c' \
 'ft_memchr.c' 'ft_memcmp.c' 'ft_strlen.c' 'ft_strdup.c' \
 'ft_strlcat.c' 'ft_strlcpy.c' 'ft_strchr.c' \
 'ft_strrchr.c' 'ft_strnstr.c' 'ft_strncmp.c' \
@@ -72,19 +72,19 @@ Bonus_func_authorized=('3' '2' '2' '0' '0' '0' '0' '3' '0')
 #              Additional functions               #
 ###################################################
 
-Additional_func=('ft_isblank.c' 'ft_iscntrl.c' 'ft_isgraph.c' 'ft_islower.c' \
+Additional_func=('ft_memccpy.c' 'ft_isblank.c' 'ft_iscntrl.c' 'ft_isgraph.c' 'ft_islower.c' \
 'ft_isspace.c' 'ft_isupper.c' 'ft_isxdigit.c' 'ft_str_is_alpha.c' 'ft_str_is_lowercase.c' \
 'ft_str_is_numeric.c' 'ft_str_is_printable.c' 'ft_str_is_uppercase.c' 'ft_strcapitalize.c' \
 'ft_strcasecmp.c' 'ft_strlowcase.c' 'ft_striteri.c' 'ft_strndup.c' 'ft_strupcase.c' \
 'ft_itoa_base.c' 'ft_strncasecmp.c' 'ft_strcasestr.c' 'ft_strtok.c')
 
-Additional_func_activation=('0' '0' '0' '0' \
+Additional_func_activation=('0' '0' '0' '0' '0' \
 '0' '0' '0' '0' '0' \
 '0' '0' '0' '0' \
 '0' '0' '0' '0' '0' \
 '0' '0' '0' '0')
 
-Additional_func_authorized=('0' '0' '0' '0' \
+Additional_func_authorized=('0' '0' '0' '0' '0' \
 '0' '0' '0' '0' '0' \
 '0' '0' '0' '0' \
 '0' '0' '0' '0' '1' '0' \
