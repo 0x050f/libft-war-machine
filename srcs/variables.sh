@@ -47,12 +47,12 @@ Part1_func=('ft_memset.c' 'ft_bzero.c' 'ft_calloc.c' 'ft_memcpy.c' 'ft_memmove.c
 ###################################################
 
 Part2_func_authorized=('1' '1' '1' '1' '3' \
-'1' '0'\
+'1' '0' \
 '4' '4' '4' '4')
 
-Part2_func_activation=('0' '0' '0'\
-'0' '0' '0' '0' '0' \
-'0' '0' '0')
+Part2_func_activation=('0' '0' '0' '0' '0'\
+'0' '0' \
+'0' '0' '0' '0')
 
 Part2_func=('ft_strmapi.c' 'ft_substr.c' 'ft_strjoin.c' 'ft_strtrim.c' 'ft_split.c' \
 'ft_itoa.c' 'ft_striteri.c' \
