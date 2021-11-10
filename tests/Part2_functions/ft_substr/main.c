@@ -6,7 +6,7 @@
 /*   By: jtoty <jtoty@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/28 12:35:18 by jtoty             #+#    #+#             */
-/*   Updated: 2019/12/04 21:51:40 by lmartin          ###   ########.fr       */
+/*   Updated: 2021/11/10 14:58:30 by ocartier         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,6 +85,7 @@ int		main(int argc, const char *argv[])
 		}
 		if (str == strsub)
 			ft_print_result("\nA new string was not returned");
+		(void)bullshit;
 	}
 	return (0);
 }
