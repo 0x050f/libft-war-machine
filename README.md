@@ -34,7 +34,7 @@ Makefile up to date.
 ### Installation
 
 ```bash
-git clone https://github.com/ska42/libft-war-machine
+git clone https://github.com/y3ll0w42/libft-war-machine
 ```
 
 ### Configuration
@@ -101,7 +101,7 @@ bash grademe.sh ft_atoi -f ft_strlen -n
 ```
 
 ### Supported functions
-All the supported functions are listed [on this page](https://github.com/ska42/libft-war-machine/blob/master/supported_functions.md).
+All the supported functions are listed [on this page](https://github.com/y3ll0w42/libft-war-machine/blob/master/supported_functions.md).
 ## Contribution
 
 Any suggestions or bugs reporting ?
