@@ -6,7 +6,7 @@
 #    By: jtoty <jtoty@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/01/23 18:26:48 by jtoty             #+#    #+#              #
-#    Updated: 2021/02/04 07:13:02 by lmartin          ###   ########.fr        #
+#    Updated: 2022/01/22 17:48:18 by fsoares-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -62,7 +62,7 @@ diff_test()
 			printf "${COLOR_FAIL}T${DEFAULT}"
 			retvalue=0
 		else
-			DIFF=$(diff -U 3 "${PATH_TEST}"/tests/$(echo ${part}tions)/$(echo $1 | cut -d . -f 1 | sed 's/_bonus//g')/user_output_test${text}$k "${PATH_TEST}"/tests/$(echo ${part}tions)/$(echo $1 | cut -d  . -f 1)/test${text}$k.output)
+			DIFF=$(diff -U 3 "${PATH_TEST}"/tests/$(echo ${part}tions)/$(echo $1 | cut -d . -f 1 | sed 's/_bonus//g')/user_output_test${text}$k "${PATH_TEST}"/tests/$(echo ${part}tions)/$(echo $1 | cut -d  . -f 1 | sed 's/_bonus//g')/test${text}$k.output)
 			printf "$> diff -U 3 user_output_test${text}$k test${text}$k.output\n" >> "${PATH_DEEPTHOUGHT}"/deepthought
 			if [ "$DIFF" != "" ] || [ ! -e "${PATH_TEST}"/tests/$(echo ${part}tions)/$(echo $1 | cut -d . -f 1 | sed 's/_bonus//g')/user_output_test${text}$k ]
 			then
