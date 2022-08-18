@@ -90,7 +90,7 @@ test_function()
 				then
 					compilation $function
 				else
-					compilation $(echo ${function})
+					compilation $(echo ${function} | sed 's/_bonus//g')
 				fi
 				check_compilation
 				check=$?
