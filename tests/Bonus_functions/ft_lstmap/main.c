@@ -90,14 +90,11 @@ int main(int argc, const char *argv[])
 			return (0);
 		if (list == elem)
 			write(1, "A new list is not returned\n", 27);
-		int i;
-		i = 0;
 		ft_print_result(list);
 		while (list->next)
 		{
 			list = list->next;
 			ft_print_result(list);
-			i++;
 		}
 	}
 	return (0);
