@@ -6,7 +6,7 @@
 /*   By: jtoty <jtoty@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/28 12:33:44 by jtoty             #+#    #+#             */
-/*   Updated: 2017/03/09 15:53:13 by jtoty            ###   ########.fr       */
+/*   Updated: 2024/04/08 09:47:12 by sidzawi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,10 +33,10 @@ void	iter(unsigned int i, char *c)
 		write(1, "wrong index\n", 12);
 	else
 		indexArray[i] = 1;
-	if (*c >= 'a' && *c <= 'z')
-		*c = *c - 32;
-	else if (*c >= 'A' && *c <= 'Z')
-		*c = *c + 32;
+	if (c[i] >= 'a' && c[i] <= 'z')
+		c[i] -= 32;
+	else if (c[i] >= 'A' && c[i] <= 'Z')
+		c[i] += 32;
 }
 
 int		main(int argc, const char *argv[])
