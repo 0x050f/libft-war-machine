@@ -6,7 +6,7 @@
 #    By: jtoty <jtoty@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/01/23 18:26:48 by jtoty             #+#    #+#              #
-#    Updated: 2022/01/22 17:48:18 by fsoares-         ###   ########.fr        #
+#    Updated: 2024/05/15 22:11:54 by fdikarev         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,9 +36,14 @@ diff_test()
 		if [ $(( $k%2 )) -eq 1 ] && ([ $1 == "ft_putchar_fd.c" ] || [ $1 == "ft_putstr_fd.c" ] || [ $1 == "ft_putendl_fd.c" ] || [ $1 == "ft_putnbr_fd.c" ])
 		then
 			#"${PATH_TEST}"/user_exe $k > "${PATH_TEST}"/tests/$(echo ${part}tions)/$(echo $1 | cut -d . -f 1)/user_output_test${text}$k 2>&1
-			"${PATH_TEST}"/user_exe $k > /dev/null 2> "${PATH_TEST}"/tests/$(echo ${part}tions)/$(echo $1 | cut -d . -f 1 | sed 's/_bonus//g')/user_output_test${text}$k
+			# Use `setarch --addr-no-randomize` to address issue with address-sanitizer
+			# and use `$(uname -m)` to be compatible with pre 2.33 version of `setarch` where `arch` argument was required.
+			# See https://github.com/google/sanitizers/issues/856
+			# and https://github.com/0x050f/libft-war-machine/pull/47
+			# for more details.
+			setarch $(uname -m) --addr-no-randomize "${PATH_TEST}"/user_exe $k > /dev/null 2> "${PATH_TEST}"/tests/$(echo ${part}tions)/$(echo $1 | cut -d . -f 1 | sed 's/_bonus//g')/user_output_test${text}$k
 		else
-			"${PATH_TEST}"/user_exe $k > "${PATH_TEST}"/tests/$(echo ${part}tions)/$(echo $1 | cut -d . -f 1 | sed 's/_bonus//g')/user_output_test${text}$k
+			setarch $(uname -m) --addr-no-randomize "${PATH_TEST}"/user_exe $k > "${PATH_TEST}"/tests/$(echo ${part}tions)/$(echo $1 | cut -d . -f 1 | sed 's/_bonus//g')/user_output_test${text}$k
 		fi
 		SIG=$?
 		if [ $SIG -eq 134 ]
