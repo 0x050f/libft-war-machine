@@ -41,13 +41,13 @@ diff_test()
 			# See https://github.com/google/sanitizers/issues/856
 			# and https://github.com/0x050f/libft-war-machine/pull/47
 			# for more details.
-			if command -v setarch &> /dev/null then
+			if command -v setarch &> /dev/null; then
 				setarch $(uname -m) --addr-no-randomize "${PATH_TEST}"/user_exe $k > /dev/null 2> "${PATH_TEST}"/tests/$(echo ${part}tions)/$(echo $1 | cut -d . -f 1 | sed 's/_bonus//g')/user_output_test${text}$k
 			else
 				"${PATH_TEST}"/user_exe $k > /dev/null 2> "${PATH_TEST}"/tests/$(echo ${part}tions)/$(echo $1 | cut -d . -f 1 | sed 's/_bonus//g')/user_output_test${text}$k
 			fi
 		else
-			if command -v setarch &> /dev/null then
+			if command -v setarch &> /dev/null; then
 				setarch $(uname -m) --addr-no-randomize "${PATH_TEST}"/user_exe $k > "${PATH_TEST}"/tests/$(echo ${part}tions)/$(echo $1 | cut -d . -f 1 | sed 's/_bonus//g')/user_output_test${text}$k
 			else
 				"${PATH_TEST}"/user_exe $k > "${PATH_TEST}"/tests/$(echo ${part}tions)/$(echo $1 | cut -d . -f 1 | sed 's/_bonus//g')/user_output_test${text}$k
