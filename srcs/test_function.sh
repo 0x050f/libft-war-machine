@@ -6,7 +6,7 @@
 #    By: jtoty <jtoty@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/01/23 18:27:09 by jtoty             #+#    #+#              #
-#    Updated: 2021/02/04 07:13:42 by lmartin          ###   ########.fr        #
+#    Updated: 2025/05/03 12:02:45 by cknoflac         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -90,7 +90,7 @@ test_function()
 				then
 					compilation $function
 				else
-					compilation $(echo ${function} | sed 's/_bonus//g')
+					compilation $(echo ${function})
 				fi
 				check_compilation
 				check=$?
