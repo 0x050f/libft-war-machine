@@ -23,7 +23,7 @@ void	ft_print_result(t_list *elem)
 	len = 0;
 	while (((char *)elem->content)[len])
 		len++;
-	write(1, ((char *)elem->content), len);
+	write(1, (((char *)elem->content), len);
 	write(1, "\n", 1);
 }
 
